@@ -3,7 +3,6 @@ const phoneList = require('./phone-list.js');
 
 exports.findPhone = function (searchString) {
   const result = [];
-  console.log('before', result);
   for (let item of phoneList) {
     for (let field of item) {
      if (field.toString().toLowerCase().replace(/\s+/g, "").indexOf(searchString.replace(/\s+/g, "").toLowerCase()) !== -1) {
@@ -12,6 +11,5 @@ exports.findPhone = function (searchString) {
       }
     }
   }
-  console.log('after:', result)
   return result;
 }
