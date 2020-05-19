@@ -3,6 +3,7 @@ const phoneList = require('./phone-list.js');
 
 exports.findPhone = function (searchString) {
   const result = [];
+  console.log(result);
   for (let item of phoneList) {
     for (let field of item) {
       console.log(result)
